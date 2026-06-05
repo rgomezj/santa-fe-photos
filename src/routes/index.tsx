@@ -12,12 +12,22 @@ import habitacion01 from "@/assets/photos/habitacion-01.jpeg.asset.json";
 import habitacion02 from "@/assets/photos/habitacion-02.jpeg.asset.json";
 import habitacion03 from "@/assets/photos/habitacion-03.jpeg.asset.json";
 import habitacion04 from "@/assets/photos/habitacion-04.jpeg.asset.json";
+import habitacion05 from "@/assets/photos/habitacion-05.jpeg.asset.json";
+import habitacion06 from "@/assets/photos/habitacion-06.jpeg.asset.json";
+import habitacion07 from "@/assets/photos/habitacion-07.jpeg.asset.json";
+import habitacion08 from "@/assets/photos/habitacion-08.jpeg.asset.json";
+import habitacion09 from "@/assets/photos/habitacion-09.jpeg.asset.json";
+import habitacion10 from "@/assets/photos/habitacion-10.jpeg.asset.json";
+import sala01 from "@/assets/photos/sala-01.jpeg.asset.json";
+import sala02 from "@/assets/photos/sala-02.jpeg.asset.json";
 import cocina01 from "@/assets/photos/cocina-01.jpeg.asset.json";
 import cocina02 from "@/assets/photos/cocina-02.jpeg.asset.json";
 import bano01 from "@/assets/photos/bano-01.jpeg.asset.json";
 import bano02 from "@/assets/photos/bano-02.jpeg.asset.json";
 import bano03 from "@/assets/photos/bano-03.jpeg.asset.json";
 import bano04 from "@/assets/photos/bano-04.jpeg.asset.json";
+import otros01 from "@/assets/photos/otros-01.jpeg.asset.json";
+import otros02 from "@/assets/photos/otros-02.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,13 +76,22 @@ const sections: Section[] = [
       { src: habitacion02.url, alt: "Habitación con cortinas y vista al pasillo" },
       { src: habitacion03.url, alt: "Habitación con lámparas colgantes y cómoda en madera" },
       { src: habitacion04.url, alt: "Detalle de habitación: cómoda, ventilador y decoración" },
+      { src: habitacion05.url, alt: "Habitación con cómoda en madera, TV y aire acondicionado" },
+      { src: habitacion06.url, alt: "Habitación con cabecero retroiluminado y lámparas colgantes" },
+      { src: habitacion07.url, alt: "Habitación con cabecero retroiluminado, vista al closet" },
+      { src: habitacion08.url, alt: "Habitación con TV, vista hacia el pasillo y la sala" },
+      { src: habitacion09.url, alt: "Habitación con TV, ventilador y cortinas" },
+      { src: habitacion10.url, alt: "Habitación con cabecero retroiluminado y cómoda en madera" },
     ],
   },
   {
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [],
+    photos: [
+      { src: sala01.url, alt: "Sala con sofá en L, barra con sillas altas y cocina al fondo" },
+      { src: sala02.url, alt: "Sala con TV en panel de madera y consola flotante" },
+    ],
   },
   {
     id: "cocina",
@@ -104,8 +123,11 @@ const sections: Section[] = [
   {
     id: "otros",
     title: "Otros",
-    description: "Otros detalles y rincones del apartamento.",
-    photos: [],
+    description: "Closet, zona de lavandería y otros espacios funcionales del apartamento.",
+    photos: [
+      { src: otros01.url, alt: "Walk-in closet con repisas y cajones en madera" },
+      { src: otros02.url, alt: "Zona de lavandería con lavadora y calentador de agua" },
+    ],
   },
 ];
 
