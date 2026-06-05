@@ -8,6 +8,16 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import habitacion01 from "@/assets/photos/habitacion-01.jpeg.asset.json";
+import habitacion02 from "@/assets/photos/habitacion-02.jpeg.asset.json";
+import habitacion03 from "@/assets/photos/habitacion-03.jpeg.asset.json";
+import habitacion04 from "@/assets/photos/habitacion-04.jpeg.asset.json";
+import cocina01 from "@/assets/photos/cocina-01.jpeg.asset.json";
+import cocina02 from "@/assets/photos/cocina-02.jpeg.asset.json";
+import bano01 from "@/assets/photos/bano-01.jpeg.asset.json";
+import bano02 from "@/assets/photos/bano-02.jpeg.asset.json";
+import bano03 from "@/assets/photos/bano-03.jpeg.asset.json";
+import bano04 from "@/assets/photos/bano-04.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
