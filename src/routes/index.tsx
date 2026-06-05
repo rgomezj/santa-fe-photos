@@ -123,8 +123,11 @@ const sections: Section[] = [
   {
     id: "otros",
     title: "Otros",
-    description: "Otros detalles y rincones del apartamento.",
-    photos: [],
+    description: "Closet, zona de lavandería y otros espacios funcionales del apartamento.",
+    photos: [
+      { src: otros01.url, alt: "Walk-in closet con repisas y cajones en madera" },
+      { src: otros02.url, alt: "Zona de lavandería con lavadora y calentador de agua" },
+    ],
   },
 ];
 
