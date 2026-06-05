@@ -8,26 +8,6 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import habitacion01 from "@/assets/photos/habitacion-01.jpeg.asset.json";
-import habitacion02 from "@/assets/photos/habitacion-02.jpeg.asset.json";
-import habitacion03 from "@/assets/photos/habitacion-03.jpeg.asset.json";
-import habitacion04 from "@/assets/photos/habitacion-04.jpeg.asset.json";
-import habitacion05 from "@/assets/photos/habitacion-05.jpeg.asset.json";
-import habitacion06 from "@/assets/photos/habitacion-06.jpeg.asset.json";
-import habitacion07 from "@/assets/photos/habitacion-07.jpeg.asset.json";
-import habitacion08 from "@/assets/photos/habitacion-08.jpeg.asset.json";
-import habitacion09 from "@/assets/photos/habitacion-09.jpeg.asset.json";
-import habitacion10 from "@/assets/photos/habitacion-10.jpeg.asset.json";
-import sala01 from "@/assets/photos/sala-01.jpeg.asset.json";
-import sala02 from "@/assets/photos/sala-02.jpeg.asset.json";
-import cocina01 from "@/assets/photos/cocina-01.jpeg.asset.json";
-import cocina02 from "@/assets/photos/cocina-02.jpeg.asset.json";
-import bano01 from "@/assets/photos/bano-01.jpeg.asset.json";
-import bano02 from "@/assets/photos/bano-02.jpeg.asset.json";
-import bano03 from "@/assets/photos/bano-03.jpeg.asset.json";
-import bano04 from "@/assets/photos/bano-04.jpeg.asset.json";
-import otros01 from "@/assets/photos/otros-01.jpeg.asset.json";
-import otros02 from "@/assets/photos/otros-02.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -65,71 +45,84 @@ type Section = {
   photos: Photo[];
 };
 
-const sections: Section[] = [
+type SectionDef = {
+  id: string;
+  title: string;
+  description: string;
+  filenamePrefix: string;
+};
+
+const photoModules = import.meta.glob("../assets/publicphotos/*.{jpg,jpeg,png}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+const photoEntries = Object.entries(photoModules).map(([path, url]) => ({
+  filename: path.split("/").pop()!,
+  src: url,
+}));
+
+const sectionDefs: SectionDef[] = [
   {
     id: "habitaciones",
     title: "Habitaciones",
     description:
       "Espacios para descansar con buena ventilación y aire acondicionado, ideales para el clima cálido del municipio.",
-    photos: [
-      { src: habitacion01.url, alt: "Habitación con cama doble, TV y aire acondicionado" },
-      { src: habitacion02.url, alt: "Habitación con cortinas y vista al pasillo" },
-      { src: habitacion03.url, alt: "Habitación con lámparas colgantes y cómoda en madera" },
-      { src: habitacion04.url, alt: "Detalle de habitación: cómoda, ventilador y decoración" },
-      { src: habitacion05.url, alt: "Habitación con cómoda en madera, TV y aire acondicionado" },
-      { src: habitacion06.url, alt: "Habitación con cabecero retroiluminado y lámparas colgantes" },
-      { src: habitacion07.url, alt: "Habitación con cabecero retroiluminado, vista al closet" },
-      { src: habitacion08.url, alt: "Habitación con TV, vista hacia el pasillo y la sala" },
-      { src: habitacion09.url, alt: "Habitación con TV, ventilador y cortinas" },
-      { src: habitacion10.url, alt: "Habitación con cabecero retroiluminado y cómoda en madera" },
-    ],
+    filenamePrefix: "Habitaciones",
   },
   {
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [
-      { src: sala01.url, alt: "Sala con sofá en L, barra con sillas altas y cocina al fondo" },
-      { src: sala02.url, alt: "Sala con TV en panel de madera y consola flotante" },
-    ],
+    filenamePrefix: "Sala",
   },
   {
     id: "cocina",
     title: "Cocina",
     description: "Cocina funcional y equipada para preparar comidas con comodidad.",
-    photos: [
-      { src: cocina01.url, alt: "Cocina con isla, nevera y barra con sillas" },
-      { src: cocina02.url, alt: "Vista de la cocina con estufa de gas y muebles en madera" },
-    ],
+    filenamePrefix: "Cocina",
   },
   {
     id: "banos",
     title: "Baños",
     description: "Baños modernos con duchas en vidrio, espejos retroiluminados y acabados en madera.",
-    photos: [
-      { src: bano01.url, alt: "Baño social con lavamanos de vasija y espejo retroiluminado" },
-      { src: bano02.url, alt: "Baño principal con ducha en vidrio y mármol" },
-      { src: bano03.url, alt: "Baño con sanitario, ducha y espejo circular" },
-      { src: bano04.url, alt: "Detalle del baño con espejo retroiluminado" },
-    ],
+    filenamePrefix: "Banos",
   },
   {
     id: "zonas-comunes",
     title: "Zonas comunes",
     description:
       "Piscina principal, toboganes, parque acuático infantil y amplias áreas sociales del conjunto.",
-    photos: [],
+    filenamePrefix: "ZonasComunes",
   },
   {
     id: "otros",
     title: "Otros",
     description: "Closet, zona de lavandería y otros espacios funcionales del apartamento.",
-    photos: [
-      { src: otros01.url, alt: "Walk-in closet con repisas y cajones en madera" },
-      { src: otros02.url, alt: "Zona de lavandería con lavadora y calentador de agua" },
-    ],
+    filenamePrefix: "Otros",
   },
 ];
+
+const sections: Section[] = sectionDefs.map((sectionDef) => ({
+  ...sectionDef,
+  photos: getPhotosForSection(sectionDef.filenamePrefix, sectionDef.title),
+}));
+
+function getPhotosForSection(filenamePrefix: string, sectionTitle: string): Photo[] {
+  return photoEntries
+    .filter((entry) => entry.filename.toLowerCase().startsWith(`${filenamePrefix.toLowerCase()}-`))
+    .sort((a, b) => getPhotoOrder(a.filename) - getPhotoOrder(b.filename))
+    .map((entry) => ({
+      src: entry.src,
+      alt: `${sectionTitle} ${getPhotoOrder(entry.filename)}`,
+    }));
+}
+
+function getPhotoOrder(filename: string): number {
+  const match = filename.match(/-(\d+)\./);
+  return match ? Number(match[1]) : 0;
+}
 
 function SectionGallery({ photos }: { photos: Photo[] }) {
   const [api, setApi] = useState<CarouselApi | null>(null);
@@ -228,7 +221,7 @@ function Index() {
             Antioquia · Colombia
           </p>
           <h1 className="text-4xl font-medium leading-tight text-foreground sm:text-6xl">
-            Un apartamento entre calles
+            Un apartamento cerca al Pueblo Patrimonio, de calles
             <br />
             empedradas y casas blancas.
           </h1>
