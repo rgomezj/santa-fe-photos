@@ -8,6 +8,14 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   base: "/santa-fe-photos/",
+  vite: {
+    build: {
+      manifest: "manifest.json",
+    },
+    optimizeDeps: {
+      entries: ["src/main.tsx"],
+    },
+  },
   tanstackStart: {
     // Disable SSR for GitHub Pages static deployment
     ssr: false,
