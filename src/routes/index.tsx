@@ -12,12 +12,22 @@ import habitacion01 from "@/assets/photos/habitacion-01.jpeg.asset.json";
 import habitacion02 from "@/assets/photos/habitacion-02.jpeg.asset.json";
 import habitacion03 from "@/assets/photos/habitacion-03.jpeg.asset.json";
 import habitacion04 from "@/assets/photos/habitacion-04.jpeg.asset.json";
+import habitacion05 from "@/assets/photos/habitacion-05.jpeg.asset.json";
+import habitacion06 from "@/assets/photos/habitacion-06.jpeg.asset.json";
+import habitacion07 from "@/assets/photos/habitacion-07.jpeg.asset.json";
+import habitacion08 from "@/assets/photos/habitacion-08.jpeg.asset.json";
+import habitacion09 from "@/assets/photos/habitacion-09.jpeg.asset.json";
+import habitacion10 from "@/assets/photos/habitacion-10.jpeg.asset.json";
+import sala01 from "@/assets/photos/sala-01.jpeg.asset.json";
+import sala02 from "@/assets/photos/sala-02.jpeg.asset.json";
 import cocina01 from "@/assets/photos/cocina-01.jpeg.asset.json";
 import cocina02 from "@/assets/photos/cocina-02.jpeg.asset.json";
 import bano01 from "@/assets/photos/bano-01.jpeg.asset.json";
 import bano02 from "@/assets/photos/bano-02.jpeg.asset.json";
 import bano03 from "@/assets/photos/bano-03.jpeg.asset.json";
 import bano04 from "@/assets/photos/bano-04.jpeg.asset.json";
+import otros01 from "@/assets/photos/otros-01.jpeg.asset.json";
+import otros02 from "@/assets/photos/otros-02.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
