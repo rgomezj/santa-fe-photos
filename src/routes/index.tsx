@@ -9,27 +9,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-import foto01 from "@/assets/photos/foto-01.jpg.asset.json";
-import foto02 from "@/assets/photos/foto-02.jpg.asset.json";
-import foto03 from "@/assets/photos/foto-03.jpg.asset.json";
-import foto04 from "@/assets/photos/foto-04.jpg.asset.json";
-import foto05 from "@/assets/photos/foto-05.jpg.asset.json";
-import foto06 from "@/assets/photos/foto-06.jpg.asset.json";
-import foto07 from "@/assets/photos/foto-07.jpg.asset.json";
-import foto08 from "@/assets/photos/foto-08.jpg.asset.json";
-import foto09 from "@/assets/photos/foto-09.jpg.asset.json";
-import foto10 from "@/assets/photos/foto-10.jpg.asset.json";
-import foto11 from "@/assets/photos/foto-11.jpg.asset.json";
-import foto12 from "@/assets/photos/foto-12.jpg.asset.json";
-import foto13 from "@/assets/photos/foto-13.jpg.asset.json";
-import foto14 from "@/assets/photos/foto-14.jpg.asset.json";
-import foto15 from "@/assets/photos/foto-15.jpg.asset.json";
-import foto16 from "@/assets/photos/foto-16.jpg.asset.json";
-import foto17 from "@/assets/photos/foto-17.jpg.asset.json";
-import foto18 from "@/assets/photos/foto-18.jpg.asset.json";
-import foto19 from "@/assets/photos/foto-19.jpg.asset.json";
-import foto20 from "@/assets/photos/foto-20.jpg.asset.json";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -45,7 +24,6 @@ export const Route = createFileRoute("/")({
         content:
           "Fotos e información del apartamento: habitaciones, sala, cocina, baños y zonas comunes.",
       },
-      { property: "og:image", content: foto09.url },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -79,19 +57,13 @@ const sections: Section[] = [
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [
-      { src: foto19.url, alt: "Vista general de la sala integrada con la cocina" },
-      { src: foto20.url, alt: "Mesa auxiliar con sillas blancas en la zona social" },
-    ],
+    photos: [],
   },
   {
     id: "cocina",
     title: "Cocina",
     description: "Cocina funcional y equipada para preparar comidas con comodidad.",
-    photos: [
-      { src: foto01.url, alt: "Mesón de la cocina con cafetera y utensilios" },
-      { src: foto18.url, alt: "Detalle de la barra de cocina con sillas altas y cava" },
-    ],
+    photos: [],
   },
   {
     id: "banos",
@@ -104,24 +76,7 @@ const sections: Section[] = [
     title: "Zonas comunes",
     description:
       "Piscina principal, toboganes, parque acuático infantil y amplias áreas sociales del conjunto.",
-    photos: [
-      { src: foto09.url, alt: "Piscina principal con sombrillas y zona de descanso" },
-      { src: foto07.url, alt: "Piscina con tobogán y vista al edificio" },
-      { src: foto06.url, alt: "Toboganes acuáticos rodeados de vegetación" },
-      { src: foto02.url, alt: "Parque acuático infantil con juegos de agua" },
-      { src: foto03.url, alt: "Parque infantil acuático junto a las torres" },
-      { src: foto10.url, alt: "Vista de las montañas desde la zona húmeda" },
-      { src: foto04.url, alt: "Fachada de una de las torres del conjunto" },
-      { src: foto08.url, alt: "Fachada de la torre T2 con balcones" },
-      { src: foto05.url, alt: "Reglamento interno de uso de la piscina" },
-      { src: foto11.url, alt: "Cancha o zona deportiva con malla y vista al paisaje" },
-      { src: foto12.url, alt: "Vista exterior de las torres desde las zonas comunes" },
-      { src: foto13.url, alt: "Acceso vehicular y parqueaderos del conjunto" },
-      { src: foto14.url, alt: "Parque infantil rodeado de palmeras" },
-      { src: foto15.url, alt: "Otra vista del parque infantil y jardines" },
-      { src: foto16.url, alt: "Jardines y palmeras dentro del conjunto" },
-      { src: foto17.url, alt: "Zona abierta con malla deportiva, árboles y palmeras" },
-    ],
+    photos: [],
   },
 ];
 
