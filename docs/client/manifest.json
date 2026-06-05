@@ -1,0 +1,213 @@
+{
+  "D:/Repos/SantaFe/santa-fe-photos/src/styles.css": {
+    "file": "assets/styles-Dllj9WWr.css",
+    "src": "D:/Repos/SantaFe/santa-fe-photos/src/styles.css"
+  },
+  "node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx": {
+    "file": "assets/index-Cil9l82B.js",
+    "name": "index",
+    "src": "node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-Dllj9WWr.css"
+    ]
+  },
+  "src/assets/publicphotos/Banos-01.jpg": {
+    "file": "assets/Banos-01-DQ0UxWf4.jpg",
+    "src": "src/assets/publicphotos/Banos-01.jpg"
+  },
+  "src/assets/publicphotos/Banos-2.jpg": {
+    "file": "assets/Banos-2-CttR6QeA.jpg",
+    "src": "src/assets/publicphotos/Banos-2.jpg"
+  },
+  "src/assets/publicphotos/Banos-3.jpg": {
+    "file": "assets/Banos-3-D6kbhxjn.jpg",
+    "src": "src/assets/publicphotos/Banos-3.jpg"
+  },
+  "src/assets/publicphotos/Banos-4.jpg": {
+    "file": "assets/Banos-4-vuCjbDed.jpg",
+    "src": "src/assets/publicphotos/Banos-4.jpg"
+  },
+  "src/assets/publicphotos/Cocina-01.jpg": {
+    "file": "assets/Cocina-01-4TUru3Lj.jpg",
+    "src": "src/assets/publicphotos/Cocina-01.jpg"
+  },
+  "src/assets/publicphotos/Cocina-02.jpg": {
+    "file": "assets/Cocina-02-CG_gZ0cu.jpg",
+    "src": "src/assets/publicphotos/Cocina-02.jpg"
+  },
+  "src/assets/publicphotos/Cocina-03.jpg": {
+    "file": "assets/Cocina-03-BMwVyzuA.jpg",
+    "src": "src/assets/publicphotos/Cocina-03.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-01.jpg": {
+    "file": "assets/Habitaciones-01-CxU_gRlb.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-01.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-02.jpg": {
+    "file": "assets/Habitaciones-02-C96MgXie.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-02.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-03.jpg": {
+    "file": "assets/Habitaciones-03-rsdH40XS.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-03.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-04.jpg": {
+    "file": "assets/Habitaciones-04-DBs0xY4z.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-04.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-05.jpg": {
+    "file": "assets/Habitaciones-04-DBs0xY4z.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-04.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-06.jpg": {
+    "file": "assets/Habitaciones-06-GQwmSMWr.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-06.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-07.jpg": {
+    "file": "assets/Habitaciones-07-CKZx53ti.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-07.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-08.jpg": {
+    "file": "assets/Habitaciones-08-B-rPKjkY.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-08.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-09.jpg": {
+    "file": "assets/Habitaciones-09-708SoTiM.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-09.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-10.jpg": {
+    "file": "assets/Habitaciones-10-CG33ku6l.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-10.jpg"
+  },
+  "src/assets/publicphotos/Habitaciones-11.jpg": {
+    "file": "assets/Habitaciones-11-C1FUJK3A.jpg",
+    "src": "src/assets/publicphotos/Habitaciones-11.jpg"
+  },
+  "src/assets/publicphotos/Otros-1.jpg": {
+    "file": "assets/Otros-1-B2zJkglv.jpg",
+    "src": "src/assets/publicphotos/Otros-1.jpg"
+  },
+  "src/assets/publicphotos/Sala-01.jpg": {
+    "file": "assets/Sala-01-CYQkB9cW.jpg",
+    "src": "src/assets/publicphotos/Sala-01.jpg"
+  },
+  "src/assets/publicphotos/Sala-02.jpg": {
+    "file": "assets/Sala-02-BT15XHJp.jpg",
+    "src": "src/assets/publicphotos/Sala-02.jpg"
+  },
+  "src/assets/publicphotos/Sala-03.jpg": {
+    "file": "assets/Sala-03-0WE1vPf7.jpg",
+    "src": "src/assets/publicphotos/Sala-03.jpg"
+  },
+  "src/assets/publicphotos/Sala-04.jpg": {
+    "file": "assets/Sala-04-DkKiH0xp.jpg",
+    "src": "src/assets/publicphotos/Sala-04.jpg"
+  },
+  "src/assets/publicphotos/Sala-05.jpg": {
+    "file": "assets/Sala-05-BswYeFT5.jpg",
+    "src": "src/assets/publicphotos/Sala-05.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-14.jpg": {
+    "file": "assets/ZonasComunes-14-D9lEDhpm.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-14.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-15.jpg": {
+    "file": "assets/ZonasComunes-15-BJq3dngN.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-15.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-16.jpg": {
+    "file": "assets/ZonasComunes-16-DvHgETsC.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-16.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-17.jpg": {
+    "file": "assets/ZonasComunes-17-BLLxKJol.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-17.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-18.jpg": {
+    "file": "assets/ZonasComunes-18-D-H_H3XU.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-18.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-19.jpg": {
+    "file": "assets/ZonasComunes-19-koxG4911.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-19.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-20.jpg": {
+    "file": "assets/ZonasComunes-20-9fW7-g7w.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-20.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-21.jpg": {
+    "file": "assets/ZonasComunes-21-D2BhfpuA.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-21.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-22.jpg": {
+    "file": "assets/ZonasComunes-22-CsGboDEv.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-22.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-23.jpg": {
+    "file": "assets/ZonasComunes-23-CBVeNUJO.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-23.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-24.jpg": {
+    "file": "assets/ZonasComunes-24-DnnzNlzO.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-24.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-25.jpg": {
+    "file": "assets/ZonasComunes-25-BuG8v3_F.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-25.jpg"
+  },
+  "src/assets/publicphotos/ZonasComunes-7.jpg": {
+    "file": "assets/ZonasComunes-7-DzhnMM7I.jpg",
+    "src": "src/assets/publicphotos/ZonasComunes-7.jpg"
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-DMHc3YKZ.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx"
+    ],
+    "assets": [
+      "assets/Banos-01-DQ0UxWf4.jpg",
+      "assets/Banos-2-CttR6QeA.jpg",
+      "assets/Banos-3-D6kbhxjn.jpg",
+      "assets/Banos-4-vuCjbDed.jpg",
+      "assets/Cocina-01-4TUru3Lj.jpg",
+      "assets/Cocina-02-CG_gZ0cu.jpg",
+      "assets/Cocina-03-BMwVyzuA.jpg",
+      "assets/Habitaciones-01-CxU_gRlb.jpg",
+      "assets/Habitaciones-02-C96MgXie.jpg",
+      "assets/Habitaciones-03-rsdH40XS.jpg",
+      "assets/Habitaciones-04-DBs0xY4z.jpg",
+      "assets/Habitaciones-06-GQwmSMWr.jpg",
+      "assets/Habitaciones-07-CKZx53ti.jpg",
+      "assets/Habitaciones-08-B-rPKjkY.jpg",
+      "assets/Habitaciones-09-708SoTiM.jpg",
+      "assets/Habitaciones-10-CG33ku6l.jpg",
+      "assets/Habitaciones-11-C1FUJK3A.jpg",
+      "assets/Otros-1-B2zJkglv.jpg",
+      "assets/Sala-01-CYQkB9cW.jpg",
+      "assets/Sala-02-BT15XHJp.jpg",
+      "assets/Sala-03-0WE1vPf7.jpg",
+      "assets/Sala-04-DkKiH0xp.jpg",
+      "assets/Sala-05-BswYeFT5.jpg",
+      "assets/ZonasComunes-14-D9lEDhpm.jpg",
+      "assets/ZonasComunes-15-BJq3dngN.jpg",
+      "assets/ZonasComunes-16-DvHgETsC.jpg",
+      "assets/ZonasComunes-17-BLLxKJol.jpg",
+      "assets/ZonasComunes-18-D-H_H3XU.jpg",
+      "assets/ZonasComunes-19-koxG4911.jpg",
+      "assets/ZonasComunes-20-9fW7-g7w.jpg",
+      "assets/ZonasComunes-21-D2BhfpuA.jpg",
+      "assets/ZonasComunes-22-CsGboDEv.jpg",
+      "assets/ZonasComunes-23-CBVeNUJO.jpg",
+      "assets/ZonasComunes-24-DnnzNlzO.jpg",
+      "assets/ZonasComunes-25-BuG8v3_F.jpg",
+      "assets/ZonasComunes-7-DzhnMM7I.jpg"
+    ]
+  }
+}

@@ -10,6 +10,7 @@ export default defineConfig({
   base: "/santa-fe-photos/",
   vite: {
     build: {
+      outDir: "docs",
       manifest: "manifest.json",
     },
     optimizeDeps: {
