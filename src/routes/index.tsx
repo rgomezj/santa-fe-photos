@@ -1,4 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
+import foto01 from "@/assets/photos/foto-01.jpg.asset.json";
+import foto02 from "@/assets/photos/foto-02.jpg.asset.json";
+import foto03 from "@/assets/photos/foto-03.jpg.asset.json";
+import foto04 from "@/assets/photos/foto-04.jpg.asset.json";
+import foto05 from "@/assets/photos/foto-05.jpg.asset.json";
+import foto06 from "@/assets/photos/foto-06.jpg.asset.json";
+import foto07 from "@/assets/photos/foto-07.jpg.asset.json";
+import foto08 from "@/assets/photos/foto-08.jpg.asset.json";
+import foto09 from "@/assets/photos/foto-09.jpg.asset.json";
+import foto10 from "@/assets/photos/foto-10.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,6 +35,7 @@ export const Route = createFileRoute("/")({
         content:
           "Fotos e información del apartamento: habitaciones, sala, cocina, baños y zonas comunes.",
       },
+      { property: "og:image", content: foto09.url },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,12 +49,12 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+type Photo = { src: string; alt: string };
 type Section = {
   id: string;
   title: string;
   description: string;
-  // Reemplaza estas URLs con las fotos reales cuando las proporciones.
-  photos: { src: string; alt: string }[];
+  photos: Photo[];
 };
 
 const sections: Section[] = [
@@ -42,56 +63,122 @@ const sections: Section[] = [
     title: "Habitaciones",
     description:
       "Espacios para descansar con buena ventilación, ideales para el clima cálido del municipio.",
-    photos: [
-      { src: "", alt: "Habitación principal" },
-      { src: "", alt: "Habitación secundaria" },
-      { src: "", alt: "Detalle de habitación" },
-    ],
+    photos: [],
   },
   {
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [
-      { src: "", alt: "Vista general de la sala" },
-      { src: "", alt: "Detalle de la sala" },
-    ],
+    photos: [],
   },
   {
     id: "cocina",
     title: "Cocina",
     description: "Cocina funcional y equipada para preparar comidas con comodidad.",
     photos: [
-      { src: "", alt: "Vista de la cocina" },
-      { src: "", alt: "Detalle de la cocina" },
+      { src: foto01.url, alt: "Mesón de la cocina con cafetera y utensilios" },
     ],
   },
   {
     id: "banos",
     title: "Baños",
     description: "Baños limpios y bien iluminados.",
-    photos: [
-      { src: "", alt: "Baño principal" },
-      { src: "", alt: "Baño secundario" },
-    ],
+    photos: [],
   },
   {
     id: "zonas-comunes",
     title: "Zonas comunes",
     description:
-      "Áreas compartidas del conjunto: piscina, BBQ, jardines y demás zonas sociales.",
+      "Piscina principal, toboganes, parque acuático infantil y amplias áreas sociales del conjunto.",
     photos: [
-      { src: "", alt: "Zona de piscina" },
-      { src: "", alt: "Jardines" },
-      { src: "", alt: "Zona social" },
+      { src: foto09.url, alt: "Piscina principal con sombrillas y zona de descanso" },
+      { src: foto07.url, alt: "Piscina con tobogán y vista al edificio" },
+      { src: foto06.url, alt: "Toboganes acuáticos rodeados de vegetación" },
+      { src: foto02.url, alt: "Parque acuático infantil con juegos de agua" },
+      { src: foto03.url, alt: "Parque infantil acuático junto a las torres" },
+      { src: foto10.url, alt: "Vista de las montañas desde la zona húmeda" },
+      { src: foto04.url, alt: "Fachada de una de las torres del conjunto" },
+      { src: foto08.url, alt: "Fachada de la torre T2 con balcones" },
+      { src: foto05.url, alt: "Reglamento interno de uso de la piscina" },
     ],
   },
 ];
 
+function SectionGallery({ photos }: { photos: Photo[] }) {
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [current, setCurrent] = useState(0);
+
+  if (photos.length === 0) {
+    return (
+      <div className="flex aspect-[16/10] w-full items-center justify-center rounded-md border border-dashed border-border/60 bg-muted/40 text-xs uppercase tracking-widest text-muted-foreground">
+        Fotos por agregar
+      </div>
+    );
+  }
+
+  useEffect(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+    const handler = () => setCurrent(api.selectedScrollSnap());
+    api.on("select", handler);
+    return () => {
+      api.off("select", handler);
+    };
+  }, [api]);
+
+  return (
+    <div className="px-10 sm:px-12">
+      <Carousel setApi={setApi} opts={{ loop: photos.length > 1 }}>
+        <CarouselContent>
+          {photos.map((photo, i) => (
+            <CarouselItem key={i}>
+              <figure className="overflow-hidden rounded-md border border-border/60 bg-card shadow-sm">
+                <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <figcaption className="flex items-center justify-between px-4 py-3 text-xs text-muted-foreground">
+                  <span>{photo.alt}</span>
+                  <span className="tabular-nums">
+                    {i + 1} / {photos.length}
+                  </span>
+                </figcaption>
+              </figure>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {photos.length > 1 && (
+          <>
+            <CarouselPrevious className="left-0 sm:-left-2" />
+            <CarouselNext className="right-0 sm:-right-2" />
+          </>
+        )}
+      </Carousel>
+      {photos.length > 1 && (
+        <div className="mt-4 flex justify-center gap-1.5">
+          {photos.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Ir a la foto ${i + 1}`}
+              onClick={() => api?.scrollTo(i)}
+              className={`h-1.5 rounded-full transition-all ${
+                i === current ? "w-6 bg-primary" : "w-1.5 bg-border"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
       <header className="relative border-b border-border/60">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/60 via-background to-background" />
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5 text-sm">
@@ -101,10 +188,7 @@ function Index() {
           <ul className="hidden gap-6 text-muted-foreground sm:flex">
             {sections.map((s) => (
               <li key={s.id}>
-                <a
-                  href={`#${s.id}`}
-                  className="transition-colors hover:text-primary"
-                >
+                <a href={`#${s.id}`} className="transition-colors hover:text-primary">
                   {s.title}
                 </a>
               </li>
@@ -122,8 +206,8 @@ function Index() {
             empedradas y casas blancas.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Información y fotografías del apartamento en el corazón de Santa Fe de
-            Antioquia, una de las villas coloniales más antiguas y bellas del país.
+            Información y fotografías del apartamento en Santa Fe de Antioquia,
+            una de las villas coloniales más antiguas y bellas del país.
           </p>
         </div>
       </header>
@@ -152,32 +236,7 @@ function Index() {
               {section.description}
             </p>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {section.photos.map((photo, i) => (
-                <figure
-                  key={i}
-                  className="group overflow-hidden rounded-md border border-border/60 bg-card shadow-sm"
-                >
-                  <div className="aspect-[4/3] w-full overflow-hidden bg-muted">
-                    {photo.src ? (
-                      <img
-                        src={photo.src}
-                        alt={photo.alt}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-widest text-muted-foreground">
-                        Foto pendiente
-                      </div>
-                    )}
-                  </div>
-                  <figcaption className="px-4 py-3 text-xs text-muted-foreground">
-                    {photo.alt}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+            <SectionGallery photos={section.photos} />
           </section>
         ))}
       </main>
