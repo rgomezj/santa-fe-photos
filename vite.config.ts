@@ -8,6 +8,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   base: "/santa-fe-photos/",
+  nitro: false,
   vite: {
     build: {
       outDir: "docs",
