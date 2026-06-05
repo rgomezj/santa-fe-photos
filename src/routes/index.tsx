@@ -76,13 +76,22 @@ const sections: Section[] = [
       { src: habitacion02.url, alt: "Habitación con cortinas y vista al pasillo" },
       { src: habitacion03.url, alt: "Habitación con lámparas colgantes y cómoda en madera" },
       { src: habitacion04.url, alt: "Detalle de habitación: cómoda, ventilador y decoración" },
+      { src: habitacion05.url, alt: "Habitación con cómoda en madera, TV y aire acondicionado" },
+      { src: habitacion06.url, alt: "Habitación con cabecero retroiluminado y lámparas colgantes" },
+      { src: habitacion07.url, alt: "Habitación con cabecero retroiluminado, vista al closet" },
+      { src: habitacion08.url, alt: "Habitación con TV, vista hacia el pasillo y la sala" },
+      { src: habitacion09.url, alt: "Habitación con TV, ventilador y cortinas" },
+      { src: habitacion10.url, alt: "Habitación con cabecero retroiluminado y cómoda en madera" },
     ],
   },
   {
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [],
+    photos: [
+      { src: sala01.url, alt: "Sala con sofá en L, barra con sillas altas y cocina al fondo" },
+      { src: sala02.url, alt: "Sala con TV en panel de madera y consola flotante" },
+    ],
   },
   {
     id: "cocina",
