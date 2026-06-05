@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -116,11 +116,15 @@ function SectionGallery({ photos }: { photos: Photo[] }) {
     );
   }
 
-  // Track selected index
-  if (api) {
-    api.off("select", () => {});
-    api.on("select", () => setCurrent(api.selectedScrollSnap()));
-  }
+  useEffect(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+    const handler = () => setCurrent(api.selectedScrollSnap());
+    api.on("select", handler);
+    return () => {
+      api.off("select", handler);
+    };
+  }, [api]);
 
   return (
     <div className="px-10 sm:px-12">
