@@ -8,6 +8,16 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import habitacion01 from "@/assets/photos/habitacion-01.jpeg.asset.json";
+import habitacion02 from "@/assets/photos/habitacion-02.jpeg.asset.json";
+import habitacion03 from "@/assets/photos/habitacion-03.jpeg.asset.json";
+import habitacion04 from "@/assets/photos/habitacion-04.jpeg.asset.json";
+import cocina01 from "@/assets/photos/cocina-01.jpeg.asset.json";
+import cocina02 from "@/assets/photos/cocina-02.jpeg.asset.json";
+import bano01 from "@/assets/photos/bano-01.jpeg.asset.json";
+import bano02 from "@/assets/photos/bano-02.jpeg.asset.json";
+import bano03 from "@/assets/photos/bano-03.jpeg.asset.json";
+import bano04 from "@/assets/photos/bano-04.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,8 +60,13 @@ const sections: Section[] = [
     id: "habitaciones",
     title: "Habitaciones",
     description:
-      "Espacios para descansar con buena ventilación, ideales para el clima cálido del municipio.",
-    photos: [],
+      "Espacios para descansar con buena ventilación y aire acondicionado, ideales para el clima cálido del municipio.",
+    photos: [
+      { src: habitacion01.url, alt: "Habitación con cama doble, TV y aire acondicionado" },
+      { src: habitacion02.url, alt: "Habitación con cortinas y vista al pasillo" },
+      { src: habitacion03.url, alt: "Habitación con lámparas colgantes y cómoda en madera" },
+      { src: habitacion04.url, alt: "Detalle de habitación: cómoda, ventilador y decoración" },
+    ],
   },
   {
     id: "sala",
@@ -63,19 +78,33 @@ const sections: Section[] = [
     id: "cocina",
     title: "Cocina",
     description: "Cocina funcional y equipada para preparar comidas con comodidad.",
-    photos: [],
+    photos: [
+      { src: cocina01.url, alt: "Cocina con isla, nevera y barra con sillas" },
+      { src: cocina02.url, alt: "Vista de la cocina con estufa de gas y muebles en madera" },
+    ],
   },
   {
     id: "banos",
     title: "Baños",
-    description: "Baños limpios y bien iluminados.",
-    photos: [],
+    description: "Baños modernos con duchas en vidrio, espejos retroiluminados y acabados en madera.",
+    photos: [
+      { src: bano01.url, alt: "Baño social con lavamanos de vasija y espejo retroiluminado" },
+      { src: bano02.url, alt: "Baño principal con ducha en vidrio y mármol" },
+      { src: bano03.url, alt: "Baño con sanitario, ducha y espejo circular" },
+      { src: bano04.url, alt: "Detalle del baño con espejo retroiluminado" },
+    ],
   },
   {
     id: "zonas-comunes",
     title: "Zonas comunes",
     description:
       "Piscina principal, toboganes, parque acuático infantil y amplias áreas sociales del conjunto.",
+    photos: [],
+  },
+  {
+    id: "otros",
+    title: "Otros",
+    description: "Otros detalles y rincones del apartamento.",
     photos: [],
   },
 ];
