@@ -19,6 +19,16 @@ import foto07 from "@/assets/photos/foto-07.jpg.asset.json";
 import foto08 from "@/assets/photos/foto-08.jpg.asset.json";
 import foto09 from "@/assets/photos/foto-09.jpg.asset.json";
 import foto10 from "@/assets/photos/foto-10.jpg.asset.json";
+import foto11 from "@/assets/photos/foto-11.jpg.asset.json";
+import foto12 from "@/assets/photos/foto-12.jpg.asset.json";
+import foto13 from "@/assets/photos/foto-13.jpg.asset.json";
+import foto14 from "@/assets/photos/foto-14.jpg.asset.json";
+import foto15 from "@/assets/photos/foto-15.jpg.asset.json";
+import foto16 from "@/assets/photos/foto-16.jpg.asset.json";
+import foto17 from "@/assets/photos/foto-17.jpg.asset.json";
+import foto18 from "@/assets/photos/foto-18.jpg.asset.json";
+import foto19 from "@/assets/photos/foto-19.jpg.asset.json";
+import foto20 from "@/assets/photos/foto-20.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -69,7 +79,10 @@ const sections: Section[] = [
     id: "sala",
     title: "Sala",
     description: "Zona social acogedora para compartir en familia o con amigos.",
-    photos: [],
+    photos: [
+      { src: foto19.url, alt: "Vista general de la sala integrada con la cocina" },
+      { src: foto20.url, alt: "Mesa auxiliar con sillas blancas en la zona social" },
+    ],
   },
   {
     id: "cocina",
@@ -77,6 +90,7 @@ const sections: Section[] = [
     description: "Cocina funcional y equipada para preparar comidas con comodidad.",
     photos: [
       { src: foto01.url, alt: "Mesón de la cocina con cafetera y utensilios" },
+      { src: foto18.url, alt: "Detalle de la barra de cocina con sillas altas y cava" },
     ],
   },
   {
@@ -100,6 +114,13 @@ const sections: Section[] = [
       { src: foto04.url, alt: "Fachada de una de las torres del conjunto" },
       { src: foto08.url, alt: "Fachada de la torre T2 con balcones" },
       { src: foto05.url, alt: "Reglamento interno de uso de la piscina" },
+      { src: foto11.url, alt: "Cancha o zona deportiva con malla y vista al paisaje" },
+      { src: foto12.url, alt: "Vista exterior de las torres desde las zonas comunes" },
+      { src: foto13.url, alt: "Acceso vehicular y parqueaderos del conjunto" },
+      { src: foto14.url, alt: "Parque infantil rodeado de palmeras" },
+      { src: foto15.url, alt: "Otra vista del parque infantil y jardines" },
+      { src: foto16.url, alt: "Jardines y palmeras dentro del conjunto" },
+      { src: foto17.url, alt: "Zona abierta con malla deportiva, árboles y palmeras" },
     ],
   },
 ];
